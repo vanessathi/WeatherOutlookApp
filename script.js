@@ -31,7 +31,6 @@ $("#submit-btn").on("click", function (searchCity) {
         function renderCity() {
 
             $("searchResultsName").empty();
-
             for (var i = 0; i < searchCityArr.length; i++) {
                 var a = $("<div>");
                 a.addClass("searchResultsName");
@@ -52,12 +51,6 @@ $("#submit-btn").on("click", function (searchCity) {
             renderCity();
         });
     });
-
-
-
-
-    //search function
-
 });
 $("#submit-btn").on("click", function (searchCity) {
     event.preventDefault();
@@ -116,12 +109,5 @@ $("#submit-btn").on("click", function (searchCity) {
         $("#fiveDay3Date").append(moment().add(3, 'days').format('l'), cityTemp3, wIcon3, cityHum3);
         $("#fiveDay4Date").append(moment().add(4, 'days').format('l'), cityTemp4, wIcon4, cityHum4);
         $("#fiveDay5Date").append(moment().add(5, 'days').format('l'), cityTemp5, wIcon5, cityHum5);
-
-
-
     });
-
-    // $(document).on("click", ".searchResults", searchCity);
-
-    // renderCity();
 });
